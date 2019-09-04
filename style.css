@@ -225,7 +225,6 @@ p {
     max-width: 750px;
     margin: 0 auto;
     text-align: center;
-    font-style: italic;
 }
 .main-gallery {
     display: flex;
@@ -256,6 +255,7 @@ p {
 }
 .main-img:hover {
     cursor: pointer;
+    opacity: 0.7;
 }
 .main-img-caption {
     position: absolute;

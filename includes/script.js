@@ -56,3 +56,23 @@ function scrollFunction () {
     }
 }
 
+// gallery image click resize\
+document.addEventListener('click', function(e) {
+    let largeImgs = document.querySelectorAll('.imgExpand');
+    if (e.target.classList.contains('gallery-img')) {
+        e.target.classList.remove('gallery-img');
+        for (i = 0; i < largeImgs.length; i++) {
+            largeImgs[i].classList.add('gallery-img');
+            largeImgs[i].classList.remove('imgExpand');
+        }
+        e.target.classList.add('imgExpand');
+    } else if (e.target.classList.contains('imgExpand')) {
+        e.target.classList.remove('imgExpand');
+        e.target.classList.add('gallery-img');
+    } else {
+        for (i = 0; i < largeImgs.length; i++) {
+            largeImgs[i].classList.add('gallery-img');
+            largeImgs[i].classList.remove('imgExpand');
+        }
+    }
+}, false);

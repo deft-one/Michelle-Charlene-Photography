@@ -379,7 +379,7 @@ p {
 .gallery-img-container {
     flex: auto;
     margin: 1em;
-    max-width: 175px;
+    max-width: 125px;
 }
 .gallery-img {
     display: block;
@@ -390,6 +390,7 @@ p {
     opacity: 0.7;
     cursor: pointer;
 }
+
 
 /* ****************** DISABLE TEXT SELECT ON TO-TOP AND MENU  ****************** */
 
@@ -416,6 +417,16 @@ p {
 .menu-out {
     transform: translateX(100%) rotateY(90deg);
     transition: all 500ms ease-in;
+}
+.imgExpand {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    max-width: 750px;
+    margin: 0 auto;
+    z-index: 999;
 }
 
 /* *************************** ANIMATIONS ***************************** */

@@ -30,6 +30,7 @@ document.addEventListener('touchstart', function(event) {
 // runs function to show / hide to-top based on page position
 window.onscroll = function () {
     scrollFunction();
+    imgRetract();
 };
 
 // When the user clicks on the button, scroll to the top of the document

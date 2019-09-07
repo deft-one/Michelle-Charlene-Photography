@@ -9,7 +9,7 @@ function menuOut () {
 }
 
 // listens for click on mobile menu, runs functions
-document.addEventListener('click', function(event) {
+document.addEventListener('touchstart', function(event) {
     let menu = document.getElementById('menu');
     let subNavUl = document.getElementById('subNavUl');
     if (event.target === menu) {
@@ -56,23 +56,25 @@ function scrollFunction () {
     }
 }
 
+// loop through expanded images and retract them all
+function imgRetract() {
+    let largeImgs = document.querySelectorAll('.imgExpand');
+    for (i = 0; i < largeImgs.length; i++) {
+        largeImgs[i].classList.add('gallery-img');
+        largeImgs[i].classList.remove('imgExpand');
+    }
+}
+
 // gallery image click resize\
 document.addEventListener('click', function(e) {
-    let largeImgs = document.querySelectorAll('.imgExpand');
     if (e.target.classList.contains('gallery-img')) {
         e.target.classList.remove('gallery-img');
-        for (i = 0; i < largeImgs.length; i++) {
-            largeImgs[i].classList.add('gallery-img');
-            largeImgs[i].classList.remove('imgExpand');
-        }
+        imgRetract();
         e.target.classList.add('imgExpand');
     } else if (e.target.classList.contains('imgExpand')) {
         e.target.classList.remove('imgExpand');
         e.target.classList.add('gallery-img');
     } else {
-        for (i = 0; i < largeImgs.length; i++) {
-            largeImgs[i].classList.add('gallery-img');
-            largeImgs[i].classList.remove('imgExpand');
-        }
+        imgRetract();
     }
 }, false);

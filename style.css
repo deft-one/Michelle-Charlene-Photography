@@ -347,10 +347,13 @@ p {
 .sitemap-text {
     line-height: 2.5em;
 }
+.sitemap-social {
+    flex: auto;
+}
 .copyright {
     flex: auto;
     padding: .25em;
-    text-align: left;
+    text-align: center;
     font-size: 0.75em;
     padding: 1em 1em 0.1em 1em;
     line-height: 2.5em;
@@ -358,8 +361,8 @@ p {
 .to-top {
     display: block;
     position: fixed;
-        bottom: 1.5em;
-        right: 6em;
+        bottom: 0.75em;
+        right: 0.75em;
     font-size: 1em;
     font-weight: bold;
     padding: .25em .5em .5em .5em;
